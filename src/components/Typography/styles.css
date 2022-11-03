@@ -1,0 +1,42 @@
+.simple-typography {
+    --base-font-size: 16px;
+
+    text-align: start;
+    margin: 0;
+}
+
+.simple-typography--h1 {
+    font-size: calc(var(--base-font-size) * 2.2);
+}
+
+.simple-typography--h2 {
+    font-size: calc(var(--base-font-size) * 1.9);
+}
+
+.simple-typography--h3 {
+    font-size: calc(var(--base-font-size) * 1.6);
+}
+
+.simple-typography--h4 {
+    font-size: calc(var(--base-font-size) * 1.4);
+}
+
+.simple-typography--h5 {
+    font-size: calc(var(--base-font-size) * 1.2);
+}
+
+.simple-typography--h6, .simple-typography--p {
+    font-size: var(--base-font-size);
+}
+
+.simple-typography--center {
+    text-align: center;
+}
+
+.simple-typography--end {
+    text-align: end;
+}
+
+.simple-typography--spaceBottom {
+    margin-bottom: 0.8em;
+}
