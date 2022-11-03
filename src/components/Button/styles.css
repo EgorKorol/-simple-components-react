@@ -1,0 +1,99 @@
+.simple-button {
+    --quantifier: 2;
+    --gap: 8px;
+    --half-gap: calc(var(--gap) / 2);
+
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    width: fit-content;
+    line-height: 1.4;
+    font-family: inherit;
+    font-size: calc(2px * var(--quantifier) + 12px);
+    padding: calc(var(--half-gap) * var(--quantifier)) calc(var(--gap) * var(--quantifier));
+}
+
+.simple-button:not(:disabled) {
+    cursor: pointer;
+}
+
+.simple-button--small {
+    --quantifier: 1;
+}
+
+.simple-button--large {
+    --quantifier: 3;
+}
+
+.simple-button--full-width {
+    display: flex;
+    width: 100%;
+}
+
+.simple-button--link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.simple-button__content {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.simple-button__icon-wrapper {
+    flex-grow: 1;
+}
+
+.simple-button__loader-wrapper {
+    --circle-size: calc(2px * var(--quantifier) + 2px);
+
+    width: calc(var(--circle-size) * 5);
+}
+
+.simple-button__loader {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    background-color: #9880ff;
+    animation: loader 1s infinite alternate;
+    animation-delay: .5s;
+}
+
+.simple-button__loader::before, .simple-button__loader::after {
+    content: '';
+    display: inline-block;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    animation: loader 1s infinite alternate;
+    background-color: #9880ff;
+}
+
+.simple-button__loader::before {
+    left: calc(0px - var(--half-gap) - var(--circle-size));
+    animation-delay: 0s;
+}
+
+.simple-button__loader::after {
+    left: calc(var(--half-gap) + var(--circle-size));
+    animation-delay: 1s;
+}
+
+@keyframes loader {
+    0% {
+        background-color: #9880ff;
+    }
+    50%,
+    100% {
+        background-color: #ebe6ff;
+    }
+}
