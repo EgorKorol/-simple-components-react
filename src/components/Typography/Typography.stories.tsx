@@ -62,8 +62,8 @@ export const WithSpaces = () => (
 
 export const Alignments = () => (
     <div>
-        <Typography>Lorem ipsum dolor.</Typography>
-        <Typography align='center'>Lorem ipsum dolor.</Typography>
-        <Typography align='end'>Lorem ipsum dolor.</Typography>
+        <Typography>Start</Typography>
+        <Typography align='center'>Center</Typography>
+        <Typography align='end'>End</Typography>
     </div>
 );
