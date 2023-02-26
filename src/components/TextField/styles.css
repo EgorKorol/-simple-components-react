@@ -1,0 +1,51 @@
+.simple-sr-only {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    border: 0 !important;
+}
+
+.simple-text-field {
+    --quantifier: 2;
+    font-size: 1rem;
+}
+
+.simple-text-field--small {
+    --quantifier: 1;
+    font-size: calc(1rem - 2px);
+}
+
+.simple-text-field--large {
+    --quantifier: 3;
+    font-size: calc(1rem + 2px);
+}
+
+.simple-text-field__label, .simple-text-field__hint {
+    display: block;
+}
+
+.simple-text-field__label {
+    margin-bottom: 4px;
+}
+
+.simple-text-field__label--required::after {
+    content: '*';
+    font-size: calc(1em - 2px);
+    margin-left: 2px;
+}
+
+.simple-text-field__input, .simple-text-field__textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: calc(2px * var(--quantifier));
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.simple-text-field__hint {
+    font-size: calc(1em - 3px);
+    margin: 2px 0 0;
+}
